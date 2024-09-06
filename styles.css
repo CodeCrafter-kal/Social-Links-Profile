@@ -1,0 +1,181 @@
+/* Global Styles */
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('./assets/fonts/static/Inter-Bold.ttf') format('truetype');
+    font-weight: 700; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter Regular';
+    src: url('./assets/fonts/static/Inter-Regular.ttf') format('truetype');
+    font-weight: 400; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter SemiBold';
+    src: url('./assets/fonts/static/Inter-SemiBold.ttf') format('truetype');
+    font-weight: 600; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter Variable';
+    src: url('/assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    --clr-Green: hsl(75, 94%, 57%);
+    --clr-White: hsl(0, 0%, 100%);
+    --clr-Grey-700: hsl(0, 0%, 20%);
+    --clr-Grey-800: hsl(0, 0%, 12%);
+    --clr-Grey-900: hsl(0, 0%, 8%);
+    --clr-Bio: hsl(0, 0%, 60%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+    align-items: center;
+    background: var(--clr-Grey-900);
+    display: flex;
+    font-family: 'Inter Regular', sans-serif;
+    height: 100vh;
+    justify-content: center;
+}
+
+h1, h2, p {
+    line-height: 1.5;
+}
+
+.card-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+}
+
+.profile-card {
+    background: var(--clr-Grey-800);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    padding: 3rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+    transform: translateY(-10px);
+}
+
+.profile-image img {
+    border-radius: 50%;
+    border: 3px solid var(--clr-Grey-700);
+    height: 12rem;
+    margin-bottom: 2rem;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    width: 12rem;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+}
+
+.profile-info h2 {
+    color: var(--clr-White);
+    font-family: 'Inter SemiBold';
+    font-size: 2.5rem;
+    margin-bottom: 0.7rem;
+}
+
+.location {
+    color: var(--clr-Green);
+    font-family: "Inter Regular";
+    font-size: 1.6rem;
+    margin-bottom: 2.8rem;
+}
+
+.bio {
+    color: var(--clr-Bio);
+    font-family: 'Inter Regular';
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.social-links .btn {
+    background: var(--clr-Grey-700);
+    border-radius: 5px;
+    color: var(--clr-White);
+    display: block;
+    font-family: 'Inter Regular';
+    font-size: 1.6rem;
+    margin: 1rem 0;
+    padding: 1.2rem 2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links .btn:hover {
+    background: var(--clr-Green);
+    color: var(--clr-Grey-900);
+    transform: scale(1.05);
+}
+
+/* Mobile (375px) */
+@media (max-width: 375px) {
+    .profile-card {
+        max-width: 100%;
+        padding: 2rem;
+    }
+
+    .profile-info h2 {
+        font-size: 2.2rem;
+    }
+
+    .location, .bio {
+        font-size: 1.4rem;
+    }
+
+    .social-links .btn {
+        font-size: 1.4rem;
+        padding: 1rem 1.8rem;
+    }
+}
+
+/* Desktop (1440px) */
+@media (min-width: 1440px) {
+    .profile-card {
+        max-width: 50rem;
+        padding: 4rem;
+    }
+
+    .profile-info h2 {
+        font-size: 3.2rem;
+    }
+
+    .location, .bio {
+        font-size: 1.8rem;
+    }
+
+    .social-links .btn {
+        font-size: 1.8rem;
+        padding: 1.5rem 2.5rem;
+    }
+}
